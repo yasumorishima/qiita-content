@@ -1,13 +1,13 @@
 ---
 title: Flutterアプリのアイコンが透明になる問題の原因と解決法（Android adaptive icon）
 tags:
-  - Flutter
   - Android
-  - AdaptiveIcon
   - GooglePlay
+  - Flutter
+  - AdaptiveIcon
 private: false
-updated_at: ''
-id: null
+updated_at: '2026-02-04T05:52:07+09:00'
+id: 0a01976ce60ede1a7c00
 organization_url_name: null
 slide: false
 ignorePublish: false
