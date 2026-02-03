@@ -2,13 +2,13 @@
 title: GitHub CodespaceでNext.js + Supabaseを動かす手順（Docker不要）
 tags:
   - GitHub
-  - Codespace
+  - Docker
   - Next.js
   - Supabase
-  - Docker
+  - CodeSpace
 private: false
-updated_at: ''
-id: null
+updated_at: '2026-02-03T21:20:19+09:00'
+id: 160a43ca8780b531d882
 organization_url_name: null
 slide: false
 ignorePublish: false
