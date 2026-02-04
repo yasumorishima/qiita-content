@@ -2,13 +2,13 @@
 title: pybaseballのspraychart()で打球分布を1行で可視化する【Google Colab対応】
 tags:
   - Python
-  - pybaseball
-  - 野球
   - データ分析
+  - 野球
   - GoogleColab
+  - pybaseball
 private: false
-updated_at: ''
-id: null
+updated_at: '2026-02-04T23:47:55+09:00'
+id: 1f350699d8e4e3e766c7
 organization_url_name: null
 slide: false
 ignorePublish: false

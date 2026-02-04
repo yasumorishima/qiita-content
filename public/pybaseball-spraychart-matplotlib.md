@@ -3,12 +3,12 @@ title: matplotlibで野球場を描画してヒートマップを重ねる【Sta
 tags:
   - Python
   - matplotlib
-  - 野球
   - データ分析
+  - 野球
   - GoogleColab
 private: false
-updated_at: ''
-id: null
+updated_at: '2026-02-04T23:47:54+09:00'
+id: 2f3a527cb0deb6164aa5
 organization_url_name: null
 slide: false
 ignorePublish: false
