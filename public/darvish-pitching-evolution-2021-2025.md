@@ -2,13 +2,13 @@
 title: Statcastデータで見るダルビッシュ有の投球変化（2021-2025）
 tags:
   - Python
-  - pybaseball
-  - 野球
   - データ分析
+  - 野球
   - GoogleColab
+  - pybaseball
 private: false
-updated_at: ''
-id: null
+updated_at: '2026-02-05T08:40:04+09:00'
+id: eca0150cc79400afcd55
 organization_url_name: null
 slide: false
 ignorePublish: false
