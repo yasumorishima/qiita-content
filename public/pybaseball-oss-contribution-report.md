@@ -2,13 +2,13 @@
 title: pybaseballに1日でPR 7件出した話（未マージ・メンテ低頻度リポジトリへのOSS貢献）
 tags:
   - Python
-  - OSS
   - GitHub
+  - OSS
   - 野球
   - pybaseball
 private: false
-updated_at: ''
-id: null
+updated_at: '2026-02-04T22:31:59+09:00'
+id: 2718b62cf7899e1f022c
 organization_url_name: null
 slide: false
 ignorePublish: false
