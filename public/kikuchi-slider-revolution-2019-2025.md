@@ -7,8 +7,8 @@ tags:
   - GoogleColab
   - pybaseball
 private: false
-updated_at: ''
-id: null
+updated_at: '2026-02-06T05:18:03+09:00'
+id: 219455f3514b902f064f
 organization_url_name: null
 slide: false
 ignorePublish: false
