@@ -2,13 +2,13 @@
 title: Statcastデータで見る今永昇太の「2年目の変化」（2024-2025）
 tags:
   - Python
-  - pybaseball
-  - 野球
   - データ分析
+  - 野球
   - GoogleColab
+  - pybaseball
 private: false
-updated_at: ''
-id: null
+updated_at: '2026-02-05T12:07:48+09:00'
+id: 5e4d9a86f20d53b73542
 organization_url_name: null
 slide: false
 ignorePublish: false
