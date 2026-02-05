@@ -2,13 +2,13 @@
 title: Statcastデータで見る千賀滉大の「お化けフォーク」（2023-2025）
 tags:
   - Python
-  - pybaseball
-  - 野球
   - データ分析
+  - 野球
   - GoogleColab
+  - pybaseball
 private: false
-updated_at: ''
-id: null
+updated_at: '2026-02-05T18:15:10+09:00'
+id: f0a149321700e71e72bf
 organization_url_name: null
 slide: false
 ignorePublish: false
