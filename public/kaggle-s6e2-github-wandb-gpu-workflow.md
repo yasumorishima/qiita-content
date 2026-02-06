@@ -1,14 +1,14 @@
 ---
 title: Kaggle S6E2参加記：GitHub連携 + W&B + GPU 3モデルアンサンブルのワークフロー
 tags:
-  - Kaggle
   - Python
   - 機械学習
+  - Kaggle
+  - lightgbm
   - wandb
-  - LightGBM
 private: false
-updated_at: ''
-id: null
+updated_at: '2026-02-07T07:58:39+09:00'
+id: f35bd4fcab2e52f9d01a
 organization_url_name: null
 slide: false
 ignorePublish: false
