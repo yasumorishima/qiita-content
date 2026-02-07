@@ -2,13 +2,13 @@
 title: Kaggleはコンペだけじゃない：MLB分析ノートブックを公開してみた
 tags:
   - Python
-  - Kaggle
   - データ分析
+  - Kaggle
   - baseball
   - pybaseball
 private: false
-updated_at: ''
-id: null
+updated_at: '2026-02-07T11:19:47+09:00'
+id: d3a3928521aa34b8a405
 organization_url_name: null
 slide: false
 ignorePublish: false
