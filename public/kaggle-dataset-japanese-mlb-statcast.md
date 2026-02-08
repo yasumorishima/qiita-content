@@ -7,7 +7,7 @@ tags:
   - baseball
   - 野球
 private: false
-updated_at: '2026-02-08T12:07:58+09:00'
+updated_at: '2026-02-08T13:49:43+09:00'
 id: 4b03c66f82bee24b69e5
 organization_url_name: null
 slide: false
