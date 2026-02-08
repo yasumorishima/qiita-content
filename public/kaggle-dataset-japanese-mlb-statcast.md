@@ -2,13 +2,13 @@
 title: 日本人MLB選手のStatcastデータセットをKaggleに公開した話
 tags:
   - Python
-  - Kaggle
-  - 野球
-  - baseball
   - データ分析
+  - Kaggle
+  - baseball
+  - 野球
 private: false
-updated_at: ''
-id: null
+updated_at: '2026-02-08T12:07:58+09:00'
+id: 4b03c66f82bee24b69e5
 organization_url_name: null
 slide: false
 ignorePublish: false
