@@ -200,8 +200,6 @@ print(f'Unique batters: {df["id"].nunique()}')
 
 https://www.kaggle.com/code/yasunorim/bat-tracking-japanese-mlb-batters-2024-2025
 
-![分析結果](https://storage.googleapis.com/kaggle-datasets-images/9439900/16019851/screenshot.png?t=2026-02-09-04-25-54)
-
 ---
 
 ## 💡 他のBaseball Savantリーダーボード
