@@ -7,7 +7,7 @@ tags:
   - baseball
   - mlb
 private: false
-updated_at: '2026-02-08T13:52:45+09:00'
+updated_at: '2026-02-08T13:57:19+09:00'
 id: 26881cbcacbafc4656a7
 organization_url_name: null
 slide: false
