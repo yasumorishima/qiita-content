@@ -2,8 +2,8 @@ name: Scheduled Article Publishing
 
 on:
   schedule:
-    # JST 12:25と12:30 = UTC 03:25と03:30 (日本時間 - 9時間)
-    - cron: '25,30 3 * * *'
+    # 毎時0分に実行（テスト用）= UTC 毎時00分
+    - cron: '0 * * * *'
   workflow_dispatch: # 手動実行も可能
 
 permissions:
