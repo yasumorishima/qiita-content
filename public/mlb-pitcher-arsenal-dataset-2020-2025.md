@@ -1,18 +1,17 @@
 ---
 title: MLB投手の球種構成データセット（2020-2025）をKaggleに公開しました
 tags:
-  - Kaggle
   - Python
-  - 野球
-  - MLB
   - データ分析
+  - Kaggle
+  - mlb
+  - 野球
 private: false
-updated_at: ''
-id: null
+updated_at: '2026-02-09T09:17:28+09:00'
+id: c7b845049d31a39284d8
 organization_url_name: null
 slide: false
 ignorePublish: false
-published_at: 2026-02-09 12:00
 ---
 # はじめに
 
