@@ -1,14 +1,14 @@
 ---
 title: DEV.toにGitHub Actionsで記事を自動投稿する方法
 tags:
-  - GitHubActions
   - CI
-  - 自動化
-  - DEV
   - ブログ
+  - 自動化
+  - dev
+  - GitHubActions
 private: false
-updated_at: ''
-id: null
+updated_at: '2026-02-09T19:14:32+09:00'
+id: 0b7b078ddbdcddd9346b
 organization_url_name: null
 slide: false
 ignorePublish: false
