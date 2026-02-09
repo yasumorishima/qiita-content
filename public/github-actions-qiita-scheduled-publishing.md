@@ -12,7 +12,7 @@ id: null
 organization_url_name: null
 slide: false
 ignorePublish: false
-published_at: 2026-02-09 12:30
+published_at: 2026-02-09 12:00
 ---
 # はじめに
 
@@ -50,9 +50,12 @@ name: Scheduled Article Publishing
 
 on:
   schedule:
-    # JST 12:00 = UTC 03:00 (日本時間 - 9時間)
-    - cron: '0 3 * * *'
+    # JST 12:00と12:30 = UTC 03:00と03:30 (日本時間 - 9時間)
+    - cron: '0,30 3 * * *'
   workflow_dispatch: # 手動実行も可能
+
+permissions:
+  contents: write
 
 jobs:
   publish-scheduled-articles:
@@ -174,10 +177,12 @@ git push
 
 ```yaml
 schedule:
-  - cron: '0 3 * * *'  # UTC 03:00 = JST 12:00
+  - cron: '0,30 3 * * *'  # UTC 03:00と03:30 = JST 12:00と12:30
 ```
 
 GitHub ActionsはUTCで動作するため、JSTから9時間引く必要があります。
+
+カンマ区切りで複数の分を指定できます（`0,30` = 0分と30分）。
 
 ### workflow_dispatch
 
@@ -200,17 +205,85 @@ fi
 
 `YYYY-MM-DD HH:MM`形式なら、文字列比較で時刻の前後を判定できます。
 
+## ⚠️ 重要：通常のpushでエラーを防ぐ
+
+`published_at`付きの記事をpushすると、通常の`publish.yml`ワークフローが**即座に公開しようとしてエラーになります**。
+
+これを防ぐため、`publish.yml`に以下の処理を追加します：
+
+```yaml
+# .github/workflows/publish.yml
+jobs:
+  publish_articles:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # ← ここから追加
+      - name: Skip scheduled articles temporarily
+        run: |
+          # published_at がある記事は一時的にスキップ
+          for file in public/*.md; do
+            if [ -f "$file" ] && grep -q "^published_at:" "$file"; then
+              echo "Temporarily ignoring scheduled article: $file"
+              sed -i 's/^ignorePublish: false/ignorePublish: true/' "$file"
+            fi
+          done
+      # ← ここまで追加
+
+      - uses: increments/qiita-cli/actions/publish@v1
+        with:
+          qiita-token: ${{ secrets.QIITA_TOKEN }}
+          root: "."
+
+      # ← ここから追加
+      - name: Restore ignorePublish setting
+        if: always()
+        run: |
+          # ignorePublish を元に戻す（scheduled-publish用）
+          for file in public/*.md; do
+            if [ -f "$file" ] && grep -q "^published_at:" "$file"; then
+              sed -i 's/^ignorePublish: true/ignorePublish: false/' "$file"
+            fi
+          done
+      # ← ここまで追加
+```
+
+### 仕組み
+
+1. **push時**: `published_at`がある記事を`ignorePublish: true`に変更 → Qiita CLIがスキップ → 元に戻す
+2. **scheduled-publish時**: `published_at`を削除してpush → 通常の`publish.yml`が動いて公開
+
+これで、予約投稿の記事をpushしてもエラーが出なくなります✅
+
 ## 応用編
 
 ### 複数の公開時刻に対応
 
-cronを複数指定すれば、1日に複数回チェックできます：
+**方法1: カンマ区切り**（同じ時の複数の分）
+
+```yaml
+schedule:
+  - cron: '0,30 3 * * *'  # JST 12:00と12:30
+```
+
+**方法2: 複数のcron**（異なる時刻）
 
 ```yaml
 schedule:
   - cron: '0 3 * * *'   # JST 12:00
   - cron: '0 9 * * *'   # JST 18:00
   - cron: '0 12 * * *'  # JST 21:00
+```
+
+**方法3: 30分ごと**（きめ細かくチェック）
+
+```yaml
+schedule:
+  - cron: '*/30 * * * *'  # 30分ごと
 ```
 
 ### Slack通知
