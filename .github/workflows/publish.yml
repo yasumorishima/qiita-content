@@ -24,27 +24,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Skip scheduled articles temporarily
-        run: |
-          # published_at がある記事は一時的にスキップ
-          for file in public/*.md; do
-            if [ -f "$file" ] && grep -q "^published_at:" "$file"; then
-              echo "Temporarily ignoring scheduled article: $file"
-              sed -i 's/^ignorePublish: false/ignorePublish: true/' "$file"
-            fi
-          done
-
       - uses: increments/qiita-cli/actions/publish@v1
         with:
           qiita-token: ${{ secrets.QIITA_TOKEN }}
           root: "."
-
-      - name: Restore ignorePublish setting
-        if: always()
-        run: |
-          # ignorePublish を元に戻す（scheduled-publish用）
-          for file in public/*.md; do
-            if [ -f "$file" ] && grep -q "^published_at:" "$file"; then
-              sed -i 's/^ignorePublish: true/ignorePublish: false/' "$file"
-            fi
-          done
