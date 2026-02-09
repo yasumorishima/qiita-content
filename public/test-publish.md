@@ -7,8 +7,9 @@ updated_at: '2026-02-09T12:42:27+09:00'
 id: 4c22f5a1ee91632f0330
 organization_url_name: null
 slide: false
-ignorePublish: false
+ignorePublish: true
+published_at: 2026-02-09 13:00
 ---
 # テスト
 
-GitHub Actionsからの自動投稿テストです。確認後すぐに削除します。
+cronテスト：13:00に自動公開されるはずです。
