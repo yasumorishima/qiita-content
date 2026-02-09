@@ -11,8 +11,7 @@ updated_at: ''
 id: null
 organization_url_name: null
 slide: false
-ignorePublish: true
-published_at: 2026-02-09 12:30
+ignorePublish: false
 ---
 # はじめに
 
