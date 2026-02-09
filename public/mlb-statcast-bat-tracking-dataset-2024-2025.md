@@ -7,8 +7,8 @@ tags:
   - mlb
   - 野球
 private: false
-updated_at: ''
-id: null
+updated_at: '2026-02-09T22:47:39+09:00'
+id: 84e27f828eaee0cf9e07
 organization_url_name: null
 slide: false
 ignorePublish: false
