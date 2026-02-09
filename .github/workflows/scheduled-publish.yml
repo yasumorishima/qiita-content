@@ -66,8 +66,9 @@ jobs:
           for file in ${{ steps.check.outputs.articles }}; do
             echo "Publishing: $file"
 
-            # published_at を削除（実際に公開）
+            # published_at と ignorePublish を削除（実際に公開）
             sed -i '/^published_at:/d' "$file"
+            sed -i '/^ignorePublish:/d' "$file"
 
             # Git設定
             git config user.name "GitHub Actions"
