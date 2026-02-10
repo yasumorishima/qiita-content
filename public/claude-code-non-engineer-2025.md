@@ -7,7 +7,7 @@ tags:
   - ClaudeCode
   - FindyTeamPlus_AI_2025
 private: false
-updated_at: '2026-02-10T20:17:28+09:00'
+updated_at: '2026-02-10T20:21:57+09:00'
 id: 33ba41fadad02215aede
 organization_url_name: null
 slide: false
