@@ -1,14 +1,14 @@
 ---
 title: 非エンジニアがClaude Codeを使って1ヶ月でできたこと
 tags:
-  - claudecode
-  - Claude
-  - 生成AI
   - Flutter
+  - 生成AI
+  - Claude
+  - ClaudeCode
   - FindyTeamPlus_AI_2025
 private: false
-updated_at: ''
-id: null
+updated_at: '2026-02-10T20:17:28+09:00'
+id: 33ba41fadad02215aede
 organization_url_name: null
 slide: false
 ignorePublish: false
