@@ -1,14 +1,14 @@
 ---
 title: .gitattributesでGitHubの言語表示を最適化する
 tags:
+  - Python
   - Git
   - GitHub
-  - Jupyter
   - データ分析
-  - Python
+  - Jupyter
 private: false
-updated_at: ''
-id: null
+updated_at: '2026-02-10T19:03:29+09:00'
+id: dfdec024ee0ab54d2211
 organization_url_name: null
 slide: false
 ignorePublish: false
