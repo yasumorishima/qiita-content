@@ -1,14 +1,14 @@
 ---
 title: 低スペックPCのFlutterビルドをGitHub Actionsに移行した話
 tags:
-  - Flutter
   - Android
-  - GitHubActions
-  - CICD
+  - Flutter
   - 個人開発
+  - CICD
+  - GitHubActions
 private: false
-updated_at: ''
-id: ''
+updated_at: '2026-02-11T23:57:48+09:00'
+id: 5be98b0ca6348694ca56
 organization_url_name: null
 slide: false
 ignorePublish: false
