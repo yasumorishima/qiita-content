@@ -4,7 +4,7 @@ tags:
   - Flutter
   - Android
   - GitHubActions
-  - CI/CD
+  - CICD
   - 個人開発
 private: false
 updated_at: ''
