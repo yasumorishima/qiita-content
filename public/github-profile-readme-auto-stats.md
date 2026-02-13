@@ -1,14 +1,14 @@
 ---
 title: GitHub Profile READMEの統計を自動更新する（GitHub Actions + Python）
 tags:
-  - GitHub
-  - GitHubActions
   - Python
+  - GitHub
   - automation
   - OSS
+  - GitHubActions
 private: false
-updated_at: ''
-id: null
+updated_at: '2026-02-14T05:00:17+09:00'
+id: b3a738a03397519b74ba
 organization_url_name: null
 slide: false
 ignorePublish: false
