@@ -1,14 +1,14 @@
 ---
 title: SIGNATE×GitHub Actionsでローカル環境なしのクラウドML実践ガイド
 tags:
+  - Python
+  - 機械学習
+  - lightgbm
   - SIGNATE
   - GitHubActions
-  - 機械学習
-  - Python
-  - LightGBM
 private: false
-updated_at: ''
-id: null
+updated_at: '2026-02-13T18:30:14+09:00'
+id: 14cd835b963dd7479336
 organization_url_name: null
 slide: false
 ignorePublish: false
