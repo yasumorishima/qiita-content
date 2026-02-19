@@ -39,21 +39,21 @@ WBC 2026ロスターに選ばれた選手のうち、MLB登録のある選手の
 
 スプレーチャート・打球速度・打球角度・カウント別成績などを表示します。
 
-![スプレーチャート](https://raw.githubusercontent.com/yasumorishima/zenn-content/main/images/wbc-batter-spray-chart.png)
+![スプレーチャート](https://raw.githubusercontent.com/yasumorishima/zenn-content/master/images/wbc-batter-spray-chart.png)
 
 ストライクゾーンを9分割し、コース別の打撃成績をヒートマップで確認できます。
 
-![ゾーンヒートマップ](https://raw.githubusercontent.com/yasumorishima/zenn-content/main/images/wbc-batter-zone-heatmap.png)
+![ゾーンヒートマップ](https://raw.githubusercontent.com/yasumorishima/zenn-content/master/images/wbc-batter-zone-heatmap.png)
 
 ### 投手ダッシュボード
 
 球種ごとのロケーション分布、L/Rスプリット、カウント別の傾向を表示します。
 
-![ピッチロケーション](https://raw.githubusercontent.com/yasumorishima/zenn-content/main/images/wbc-pitcher-location.png)
+![ピッチロケーション](https://raw.githubusercontent.com/yasumorishima/zenn-content/master/images/wbc-pitcher-location.png)
 
 球種ごとの変化量（水平・垂直方向）をプロットします。球速との関係も確認できます。
 
-![変化量チャート](https://raw.githubusercontent.com/yasumorishima/zenn-content/main/images/wbc-pitcher-movement.png)
+![変化量チャート](https://raw.githubusercontent.com/yasumorishima/zenn-content/master/images/wbc-pitcher-movement.png)
 
 ### ダッシュボード URL一覧
 
@@ -89,7 +89,7 @@ WBC 2026ロスターに選ばれた選手のうち、MLB登録のある選手の
 
 https://www.kaggle.com/datasets/yasunorim/wbc-2026-scouting
 
-![データセットページ](https://raw.githubusercontent.com/yasumorishima/zenn-content/main/images/wbc-kaggle-dataset.png)
+![データセットページ](https://raw.githubusercontent.com/yasumorishima/zenn-content/master/images/wbc-kaggle-dataset.png)
 
 WBC 2026ロスター選手（MLB登録あり）のStatcastデータをまとめたデータセットです。データは [Baseball Savant](https://baseballsavant.mlb.com/) から [pybaseball](https://github.com/jldbc/pybaseball) で取得しました。
 
@@ -112,7 +112,7 @@ https://www.kaggle.com/code/yasunorim/wbc-2026-scouting-eda-statcast-analysis
 
 カ国別のファストボール平均球速や打球速度など、データセットの概観を可視化しています。
 
-![ノートブックのグラフ出力](https://raw.githubusercontent.com/yasumorishima/zenn-content/main/images/wbc-notebook-graph.png)
+![ノートブックのグラフ出力](https://raw.githubusercontent.com/yasumorishima/zenn-content/master/images/wbc-notebook-graph.png)
 
 ---
 
