@@ -7,12 +7,16 @@ tags:
   - baseball
   - Streamlit
 private: false
-updated_at: '2026-02-19T18:54:56+09:00'
+updated_at: '2026-02-19T22:39:39+09:00'
 id: ce89231a145ddb37c712
 organization_url_name: null
 slide: false
 ignorePublish: false
 ---
+Claude Codeさんの全力支援のもと作成。
+
+streamlitとかCladeCodeに作成して貰わないと全然わからない。
+
 
 ## 作ったもの
 

@@ -2,13 +2,13 @@
 title: git pushするだけでKaggle Notebookをデプロイ：kaggle-notebook-deploy を作った
 tags:
   - Python
-  - Kaggle
-  - GitHubActions
   - PyPI
   - 機械学習
+  - Kaggle
+  - GitHubActions
 private: false
-updated_at: ''
-id: null
+updated_at: '2026-02-21T14:47:53+09:00'
+id: 73fadab16916dc172ede
 organization_url_name: null
 slide: false
 ignorePublish: false
