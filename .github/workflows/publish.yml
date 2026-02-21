@@ -18,13 +18,26 @@ concurrency:
 jobs:
   publish_articles:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install qiita-cli
+        run: npm install -g @qiita/qiita-cli@v1.7.0
+
+      - name: Pull latest timestamps from Qiita
+        env:
+          QIITA_TOKEN: ${{ secrets.QIITA_TOKEN }}
+        run: qiita pull --force
+
       - uses: increments/qiita-cli/actions/publish@v1
         with:
           qiita-token: ${{ secrets.QIITA_TOKEN }}
           root: "."
+          commit-message: "Updated by qiita-cli [skip ci]"
