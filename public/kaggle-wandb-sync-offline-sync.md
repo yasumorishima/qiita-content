@@ -2,13 +2,13 @@
 title: KaggleのW&B実験管理をオフラインでも動かす：kaggle-wandb-sync を作った
 tags:
   - Python
+  - PyPI
   - Kaggle
   - GitHubActions
-  - WandB
-  - PyPI
+  - wandb
 private: false
-updated_at: ''
-id: null
+updated_at: '2026-02-22T10:00:37+09:00'
+id: 8a85e59b42e983ffcfb4
 organization_url_name: null
 slide: false
 ignorePublish: false

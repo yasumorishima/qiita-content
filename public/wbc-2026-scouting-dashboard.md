@@ -7,7 +7,7 @@ tags:
   - baseball
   - Streamlit
 private: false
-updated_at: '2026-02-19T22:39:39+09:00'
+updated_at: '2026-02-21T15:22:59+09:00'
 id: ce89231a145ddb37c712
 organization_url_name: null
 slide: false
@@ -25,6 +25,12 @@ WBC 2026（ワールドベースボールクラシック）に向けて、MLBの
 1. **Streamlit スカウティングダッシュボード** — 全20チーム・30アプリ（打者17 + 投手13）
 2. **Kaggle データセット** — 20カ国・54万投球以上のStatcastデータ
 3. **Kaggle EDA ノートブック** — 国別ファストボール球速などの分析
+
+## 🌐 ランディングページ
+
+**[https://wbc-2026-scouting-dashboard-zvg.caffeine.xyz/](https://wbc-2026-scouting-dashboard-zvg.caffeine.xyz/)**
+
+全チームのダッシュボードリンクをプール別にまとめたランディングページ（ICP / Caffeine 上でホスト、英語・日本語対応）。
 
 ---
 
