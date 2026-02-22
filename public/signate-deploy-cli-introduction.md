@@ -122,16 +122,26 @@ GitHub Actions経由で学習と提出を実行します。
 | `task-list` | タスク一覧表示 |
 | `file-list` | ファイル一覧表示 |
 
-## 実例
+## 実例：医学論文の自動仕分けチャレンジ
 
-実際にSIGNATEのコンペティションで使い、setup-token → download → submit の全フローがGitHub Actions上で完結することを確認しました。
+実際にSIGNATEの[【復刻版】医学論文の自動仕分けチャレンジ](https://user.competition.signate.jp/)で使いました。
+
+### セットアップから初提出まで
 
 ```bash
-python -m signate_deploy setup-token   # トークン設定
-python -m signate_deploy download      # データダウンロード
-# ... 学習コード作成 ...
-python -m signate_deploy submit        # 提出
+# トークン設定
+python -m signate_deploy setup-token
+
+# データダウンロード
+python -m signate_deploy download
+
+# 学習コード作成後、提出
+python -m signate_deploy submit
 ```
+
+TF-IDF + LogisticRegression に閾値チューニング（0.05）を適用し、FBeta（β=7）スコア **0.798** で初提出できました。
+
+setup-token → download → submit の全フローがGitHub Actions上で完結しています。
 
 ## ハマりポイント
 
