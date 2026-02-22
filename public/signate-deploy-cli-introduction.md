@@ -2,13 +2,13 @@
 title: SIGNATEコンペの提出をCLIで自動化する：signate-deploy を作った
 tags:
   - Python
-  - SIGNATE
-  - GitHubActions
   - PyPI
   - 機械学習
+  - SIGNATE
+  - GitHubActions
 private: false
-updated_at: ''
-id: null
+updated_at: '2026-02-22T19:37:32+09:00'
+id: f8d4d12c1ac60d34af92
 organization_url_name: null
 slide: false
 ignorePublish: false
