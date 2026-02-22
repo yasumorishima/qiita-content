@@ -7,7 +7,7 @@ tags:
   - baseball
   - statcast
 private: false
-updated_at: '2026-02-23T07:53:02+09:00'
+updated_at: '2026-02-23T08:24:48+09:00'
 id: 6b57d262fe957a113fba
 organization_url_name: null
 slide: false
