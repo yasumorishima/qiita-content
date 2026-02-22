@@ -5,10 +5,10 @@ tags:
   - PyPI
   - 機械学習
   - SIGNATE
-  - WandB
+  - wandb
 private: false
-updated_at: ''
-id: null
+updated_at: '2026-02-23T00:05:50+09:00'
+id: 5e06e1b11e661a779cc9
 organization_url_name: null
 slide: false
 ignorePublish: false
