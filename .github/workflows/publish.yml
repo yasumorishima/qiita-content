@@ -31,10 +31,50 @@ jobs:
       - name: Install qiita-cli
         run: npm install -g @qiita/qiita-cli@v1.7.0
 
-      - name: Pull latest timestamps from Qiita
+      - name: Sync with Qiita (pull metadata, keep local content)
         env:
           QIITA_TOKEN: ${{ secrets.QIITA_TOKEN }}
-        run: qiita pull --force
+        run: |
+          # Save git content (the version we want to publish)
+          cp -r public /tmp/public_git
+
+          # Pull from Qiita to get latest updated_at/id (avoids stale errors)
+          qiita pull --force
+
+          # Restore git content on top of pulled metadata
+          # For each file in our git version, overwrite the pulled version
+          for git_file in /tmp/public_git/*.md; do
+            basename=$(basename "$git_file")
+            qiita_file="public/$basename"
+
+            if [ -f "$qiita_file" ]; then
+              # File exists on both sides: keep git body, merge Qiita metadata (id, updated_at)
+              # Extract id and updated_at from Qiita-pulled version
+              qiita_id=$(sed -n "s/^id: *//p" "$qiita_file" | head -1)
+              qiita_updated=$(sed -n "s/^updated_at: *//p" "$qiita_file" | head -1)
+
+              # Start with git version
+              cp "$git_file" "$qiita_file"
+
+              # Inject Qiita metadata if git version has null/empty id
+              git_id=$(sed -n "s/^id: *//p" "$qiita_file" | head -1)
+              if [ "$git_id" = "null" ] || [ -z "$git_id" ]; then
+                if [ -n "$qiita_id" ] && [ "$qiita_id" != "null" ]; then
+                  sed -i "s/^id: .*/id: $qiita_id/" "$qiita_file"
+                fi
+              fi
+              if [ -n "$qiita_updated" ]; then
+                sed -i "s/^updated_at: .*/updated_at: $qiita_updated/" "$qiita_file"
+              fi
+            else
+              # New file not yet on Qiita: just copy it
+              cp "$git_file" "$qiita_file"
+            fi
+          done
+
+          echo "=== Sync complete ==="
+          echo "Files to publish:"
+          ls public/*.md | wc -l
 
       - uses: increments/qiita-cli/actions/publish@v1
         with:
