@@ -2,13 +2,13 @@
 title: Driveline C3Dデータで投球・打撃の3D骨格検知をやってみた
 tags:
   - Python
-  - 野球
   - OpenCV
   - データ分析
+  - 野球
   - バイオメカニクス
 private: false
-updated_at: ''
-id: ''
+updated_at: '2026-02-25T12:51:20+09:00'
+id: 1223f01edb8c02abd68f
 organization_url_name: null
 slide: false
 ignorePublish: false
