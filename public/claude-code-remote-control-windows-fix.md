@@ -1,13 +1,13 @@
 ---
 title: Claude Code の remote-control が Windows で Workspace not trusted になる場合の対処法
 tags:
-  - ClaudeCode
   - Windows
-  - Claude
   - AI
+  - Claude
+  - ClaudeCode
 private: false
-updated_at: ''
-id: null
+updated_at: '2026-02-27T12:47:49+09:00'
+id: 9ff7c7149176ce52bcf6
 organization_url_name: null
 slide: false
 ignorePublish: false
