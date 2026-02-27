@@ -2,13 +2,13 @@
 title: Streamlit CloudのZzzを自動で防ぐ — HTTP GETでは起きない理由とPlaywrightでの解決法
 tags:
   - Python
-  - Streamlit
-  - Playwright
   - RaspberryPi
   - GitHubActions
+  - Playwright
+  - Streamlit
 private: false
-updated_at: ''
-id: null
+updated_at: '2026-02-27T23:39:43+09:00'
+id: 7a30abcf48b482a0d5dc
 organization_url_name: null
 slide: false
 ignorePublish: false
