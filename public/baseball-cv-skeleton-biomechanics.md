@@ -7,7 +7,7 @@ tags:
   - 野球
   - バイオメカニクス
 private: false
-updated_at: '2026-02-25T15:38:12+09:00'
+updated_at: '2026-03-01T08:12:47+09:00'
 id: 1223f01edb8c02abd68f
 organization_url_name: null
 slide: false

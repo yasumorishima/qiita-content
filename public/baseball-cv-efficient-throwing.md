@@ -2,12 +2,12 @@
 title: 腕速度が同じ投手で10mph差が出る理由をモーションキャプチャで探った
 tags:
   - Python
+  - 機械学習
   - データ分析
   - 野球
   - バイオメカニクス
-  - 機械学習
 private: false
-updated_at: ''
+updated_at: '2026-03-01T08:12:47+09:00'
 id: aa06d1126b2a8269a132
 organization_url_name: null
 slide: false
