@@ -2,13 +2,13 @@
 title: GitHub ActionsでNPB予測を年次自動再学習 — MLOps的に育てた話
 tags:
   - Python
+  - 野球
   - MLOps
   - GitHubActions
   - FastAPI
-  - 野球
 private: false
-updated_at: ''
-id: null
+updated_at: '2026-02-28T19:28:24+09:00'
+id: 343e62df6930780d7f52
 organization_url_name: null
 slide: false
 ignorePublish: false
