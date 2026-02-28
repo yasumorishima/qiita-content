@@ -5,7 +5,7 @@ tags:
   - AI
   - Claude
   - ClaudeCode
-private: false
+private: true
 updated_at: '2026-02-27T12:47:49+09:00'
 id: 9ff7c7149176ce52bcf6
 organization_url_name: null
