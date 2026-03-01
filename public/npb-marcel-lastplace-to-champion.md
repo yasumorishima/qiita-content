@@ -7,7 +7,7 @@ tags:
   - NPB
   - Streamlit
 private: false
-updated_at: '2026-03-01T19:49:13+09:00'
+updated_at: '2026-03-01T19:56:03+09:00'
 id: 84487b2a9b43c9bfc28c
 organization_url_name: null
 slide: false
