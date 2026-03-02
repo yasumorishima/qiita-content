@@ -7,7 +7,7 @@ tags:
   - SIGNATE
   - GitHubActions
 private: false
-updated_at: '2026-02-22T19:51:36+09:00'
+updated_at: '2026-03-02T17:44:54+09:00'
 id: f8d4d12c1ac60d34af92
 organization_url_name: null
 slide: false
