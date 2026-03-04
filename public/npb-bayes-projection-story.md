@@ -2,13 +2,13 @@
 title: Marcel法の限界を超えたい — NPB予測にベイズ回帰を導入した15ステップの記録
 tags:
   - Python
-  - ベイズ統計
   - データ分析
-  - 野球
   - Stan
+  - 野球
+  - ベイズ統計
 private: false
-updated_at: ''
-id: null
+updated_at: '2026-03-04T23:55:44+09:00'
+id: d037db93e6d8bb0ffdfa
 organization_url_name: null
 slide: false
 ignorePublish: false
