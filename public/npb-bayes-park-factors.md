@@ -7,8 +7,8 @@ tags:
   - 野球
   - ベイズ統計
 private: false
-updated_at: ''
-id: null
+updated_at: '2026-03-05T14:44:08+09:00'
+id: a36efcba8fa4bb59aaca
 organization_url_name: null
 slide: false
 ignorePublish: false
