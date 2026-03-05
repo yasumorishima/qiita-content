@@ -187,4 +187,4 @@ https://github.com/yasumorishima/npb-bayes-projection
 
 - [Marcel法の限界を超えたい — NPBベイズ回帰15ステップの記録](https://qiita.com/yasumorishima/items/d037db93e6d8bb0ffdfa)
 - [NPBパークファクター10年推移 — 改修で球場はどう変わったか](https://qiita.com/yasumorishima/items/31e2dee6a553f66d9fdd)
-- [NPBベイズ順位予測にパークファクター補正を追加した](https://qiita.com/yasumorishima/items/npb-bayes-park-factors)
+- [NPBベイズ順位予測にパークファクター補正を追加した](https://qiita.com/yasumorishima/items/a36efcba8fa4bb59aaca)
