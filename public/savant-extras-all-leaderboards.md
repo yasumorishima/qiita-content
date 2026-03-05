@@ -7,7 +7,7 @@ tags:
   - mlb
   - Savant
 private: false
-updated_at: '2026-02-23T22:24:41+09:00'
+updated_at: '2026-03-05T09:00:27+09:00'
 id: 7ad8ea68c4fe47efc638
 organization_url_name: null
 slide: false
