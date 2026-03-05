@@ -2,13 +2,13 @@
 title: NPBの「球場格差」を10年分データで可視化した — パークファクターの計算から改修効果まで
 tags:
   - Python
+  - matplotlib
+  - pandas
   - データ分析
   - 野球
-  - pandas
-  - matplotlib
 private: false
-updated_at: ''
-id: null
+updated_at: '2026-03-05T13:32:07+09:00'
+id: fdb76a4e6795b978f479
 organization_url_name: null
 slide: false
 ignorePublish: false
