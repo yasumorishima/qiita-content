@@ -227,3 +227,9 @@ for reno_year in breaks:
 **データ・コード**: https://github.com/yasumorishima/npb-prediction
 
 データ出典: baseball-data.com / npb.jp（生データの再配布は行っていません）
+
+---
+
+## 関連記事
+
+- [Marcel法の限界を超えたい — NPB予測にベイズ回帰を導入した15ステップの記録](https://qiita.com/yasumorishima/items/d037db93e6d8bb0ffdfa)

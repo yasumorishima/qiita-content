@@ -316,3 +316,9 @@ data/metrics/metrics_2026.json
 複数年分溜まれば精度の推移を追えるようになります。「MLOps」と呼べるかはまだ怪しいですが、少なくとも「スクリプトを手動実行する運用」からは脱却できました。
 
 → **GitHub**: https://github.com/yasumorishima/npb-prediction
+
+---
+
+## 関連記事
+
+- [Marcel法の限界を超えたい — NPB予測にベイズ回帰を導入した15ステップの記録](https://qiita.com/yasumorishima/items/d037db93e6d8bb0ffdfa)
