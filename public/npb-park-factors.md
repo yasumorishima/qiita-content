@@ -7,7 +7,7 @@ tags:
   - データ分析
   - 野球
 private: false
-updated_at: '2026-03-05T14:15:41+09:00'
+updated_at: '2026-03-05T14:25:42+09:00'
 id: fdb76a4e6795b978f479
 organization_url_name: null
 slide: false
