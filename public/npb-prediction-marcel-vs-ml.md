@@ -7,7 +7,7 @@ tags:
   - 野球
   - FastAPI
 private: false
-updated_at: '2026-03-01T21:22:41+09:00'
+updated_at: '2026-03-05T14:15:42+09:00'
 id: 15bec75a17dd18654ebf
 organization_url_name: null
 slide: false
