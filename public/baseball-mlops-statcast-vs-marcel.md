@@ -2,13 +2,13 @@
 title: Statcastデータで選手成績予測の精度は上がるか — Marcel法との比較
 tags:
   - Python
-  - データ分析
-  - LightGBM
-  - 野球
   - 機械学習
+  - データ分析
+  - 野球
+  - lightgbm
 private: false
-updated_at: ''
-id: null
+updated_at: '2026-03-07T07:53:03+09:00'
+id: 7cb8f8b602d12fa0e7e3
 organization_url_name: null
 slide: false
 ignorePublish: false
