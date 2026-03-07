@@ -2,13 +2,13 @@
 title: Marcel法の重みをNPBデータで最適化した — MLBデフォルトとの差を検証
 tags:
   - Python
-  - 野球
-  - データ分析
   - 統計
+  - データ分析
+  - 野球
   - GitHubActions
 private: false
-updated_at: ''
-id: null
+updated_at: '2026-03-08T08:41:50+09:00'
+id: e8cbe2d5e6e503e71fcb
 organization_url_name: null
 slide: false
 ignorePublish: false
