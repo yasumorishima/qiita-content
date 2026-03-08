@@ -7,7 +7,7 @@ tags:
   - 野球
   - GitHubActions
 private: false
-updated_at: '2026-03-08T08:52:36+09:00'
+updated_at: '2026-03-08T17:38:12+09:00'
 id: e8cbe2d5e6e503e71fcb
 organization_url_name: null
 slide: false
