@@ -1,13 +1,13 @@
 ---
 title: GitHub ActionsでリポをまたいだREADME自動更新を実装する
 tags:
-  - GitHubActions
-  - GitHub
   - Python
+  - GitHub
   - 自動化
+  - GitHubActions
 private: false
-updated_at: ''
-id: null
+updated_at: '2026-03-10T19:56:17+09:00'
+id: 213b54f2aa608dd0bbbc
 organization_url_name: null
 slide: false
 ignorePublish: false
