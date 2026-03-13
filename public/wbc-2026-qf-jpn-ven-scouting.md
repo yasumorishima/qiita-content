@@ -2,13 +2,13 @@
 title: WBC準々決勝 日本vsベネズエラをMLB Statcastデータで分析するStreamlitアプリを作った
 tags:
   - Python
-  - Streamlit
-  - baseball
-  - Statcast
   - データ分析
+  - baseball
+  - Streamlit
+  - statcast
 private: false
-updated_at: ''
-id: null
+updated_at: '2026-03-14T02:02:36+09:00'
+id: bd48585300431c2d5939
 organization_url_name: null
 slide: false
 ignorePublish: false
