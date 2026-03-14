@@ -41,12 +41,16 @@ aisstream.io (WebSocket)
  +-----------------------+    +--------------------+
  | ais-collector          |    | snapshot-cron       |
  |  collector.py (WS受信) |    |  snapshot.py        |
- |  api.py (FastAPI)      |    |  auto_push.sh       |
- |  main.py (統合起動)    |    |  (6時間ごとcron)    |
+ |  land_filter.py        |    |  auto_push.sh       |
+ |  api.py (FastAPI)      |    |  (6時間ごとcron)    |
+ |  main.py (統合起動)    |    |                     |
  +-----------------------+    +--------------------+
-       |                              |
-   SQLite (ais.db)               GitHub README
-   Leaflet.js (port 8002)       (スナップショット画像)
+       |         |                     |
+   SQLite    Leaflet.js地図       GitHub README
+   (ais.db)  (port 8002)         (スナップショット画像)
+       |
+   Natural Earth 10m
+   (land_mask.geojson)
 ```
 
 Raspberry Pi 5上でDockerコンテナとして常時稼働させています。
@@ -158,7 +162,33 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
 - 「Show Track (6h)」ボタンで航跡表示
 - 30秒ごとに自動更新
 
-![地図のスクリーンショット](https://raw.githubusercontent.com/yasumorishima/hormuz-ship-tracker/master/docs/screenshot.png)
+![ライブ地図のスクリーンショット（破線はデータ収集範囲）](https://raw.githubusercontent.com/yasumorishima/hormuz-ship-tracker/master/docs/screenshot.png)
+
+### land_filter.py: 陸地フィルタ
+
+AISデータにはGPS精度の問題や建物に設置されたAIS中継器からの信号により、陸上の位置データが混入することがあります。[Natural Earth](https://www.naturalearthdata.com/)の10m解像度陸地ポリゴンデータを使って除外しています。
+
+```python
+from shapely.geometry import Point, shape
+from shapely.ops import unary_union
+from shapely.prepared import prep
+
+# 陸地ポリゴンを読み込み、prepared geometryで高速化
+with open("data/land_mask.geojson") as f:
+    data = json.load(f)
+geoms = [shape(feature["geometry"]) for feature in data["features"]]
+land = unary_union(geoms)
+prepared_land = prep(land)
+
+def is_on_land(lat: float, lon: float) -> bool:
+    return prepared_land.contains(Point(lon, lat))
+```
+
+Shapelyの`prepared geometry`は内部にR-treeインデックスを構築し、繰り返しの点包含判定を高速化します。AISメッセージは毎秒複数回到着するため、素の`contains`では対応できません。
+
+フィルタはコレクター（DB保存前）・API（クエリ結果返却時）・スナップショット（画像生成時）の3箇所に適用しています。ランドマスクファイルが読み込めない場合はfail-open（フィルタなしで通過）とし、データ収集が止まらない設計です。
+
+クロップ済みGeoJSONは34KB（26ポリゴン）で、`scripts/generate_land_mask.py`で再生成できます。
 
 ### snapshot.py: matplotlibスナップショット
 
@@ -249,6 +279,9 @@ docker compose up -d
 | SHA256比較 | 船が動いていない時間帯の無駄なgit pushを防止 |
 | 1プロセスでcollector+API | asyncio.gatherで十分。コンテナを分けるほどの規模ではない |
 | 近似ポリゴン海岸線 | shapefileライブラリ依存を避けた |
+| Natural Earth 10mで陸地フィルタ | 50m/110mではケシュム島やバンダルアッバス付近が粗すぎた |
+| Shapely prepared geometry | R-treeインデックスでストリーミングデータの高速判定 |
+| fail-open設計 | ランドマスク読込失敗時はフィルタなしで通過（可用性優先） |
 
 ## まとめ
 
