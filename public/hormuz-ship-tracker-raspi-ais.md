@@ -6,8 +6,8 @@ tags:
   - Docker
   - ais
   - FastAPI
-private: true
-updated_at: '2026-03-14T22:26:53+09:00'
+private: false
+updated_at: '2026-03-14T22:39:02+09:00'
 id: 259af7d5ca5e12aa5240
 organization_url_name: null
 slide: false
