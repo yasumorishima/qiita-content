@@ -49,7 +49,7 @@ aisstream.io (WebSocket)
    Leaflet.js (port 8002)       (スナップショット画像)
 ```
 
-このRaspberry Pi 5では既にNPB予測API（port 8000）、MLB勝利確率API（port 8001）、Streamlit keepaliveの3コンテナが稼働しています。ship trackerは追加の2コンテナ（port 8002）です。
+Raspberry Pi 5上でDockerコンテナとして常時稼働させています。
 
 ## データソース: aisstream.io
 
