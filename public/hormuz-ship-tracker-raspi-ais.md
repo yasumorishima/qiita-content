@@ -4,11 +4,11 @@ tags:
   - Python
   - RaspberryPi
   - Docker
+  - ais
   - FastAPI
-  - AIS
 private: false
-updated_at: ''
-id: null
+updated_at: '2026-03-14T16:48:39+09:00'
+id: 259af7d5ca5e12aa5240
 organization_url_name: null
 slide: false
 ignorePublish: false
