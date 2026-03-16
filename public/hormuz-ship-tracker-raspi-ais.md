@@ -7,7 +7,7 @@ tags:
   - ais
   - FastAPI
 private: false
-updated_at: '2026-03-16T09:07:53+09:00'
+updated_at: '2026-03-16T09:10:55+09:00'
 id: 259af7d5ca5e12aa5240
 organization_url_name: null
 slide: false
