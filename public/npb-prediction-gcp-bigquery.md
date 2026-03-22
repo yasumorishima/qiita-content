@@ -1,14 +1,14 @@
 ---
 title: NPB予測システムをBigQueryに載せた — 無料枠でBQML・Cloud Runまで
 tags:
-  - BigQuery
-  - GCP
   - Python
-  - MLOps
+  - BigQuery
   - 野球
+  - MLOps
+  - GoogleCloud
 private: false
-updated_at: ''
-id: null
+updated_at: '2026-03-22T09:32:18+09:00'
+id: f2508574e6a11057c0eb
 organization_url_name: null
 slide: false
 ignorePublish: false
