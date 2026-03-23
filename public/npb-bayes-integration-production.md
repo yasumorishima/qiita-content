@@ -3,12 +3,12 @@ title: NPB予測にベイズ統合+モンテカルロを実装した作業メモ
 tags:
   - Python
   - データ分析
-  - ベイズ統計
   - 野球
+  - ベイズ統計
   - Streamlit
 private: false
-updated_at: ''
-id: null
+updated_at: '2026-03-24T05:54:23+09:00'
+id: b08e227d38d3ef98bc60
 organization_url_name: null
 slide: false
 ignorePublish: false
