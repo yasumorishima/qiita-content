@@ -2,13 +2,13 @@
 title: 2021年NPB「最下位→優勝」をベイズモデルで予測できたか検証した
 tags:
   - Python
+  - 機械学習
   - データ分析
   - 野球
   - ベイズ統計
-  - 機械学習
 private: false
-updated_at: ''
-id: null
+updated_at: '2026-03-24T11:51:53+09:00'
+id: 61940d30efce1490514e
 organization_url_name: null
 slide: false
 ignorePublish: false
