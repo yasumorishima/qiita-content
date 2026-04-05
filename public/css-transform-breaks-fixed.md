@@ -1,14 +1,14 @@
 ---
-title: "transform: translateY(0) が position: fixed を壊す — SPAアニメーションの罠"
+title: 'transform: translateY(0) が position: fixed を壊す — SPAアニメーションの罠'
 tags:
   - CSS
-  - NextJS
-  - React
   - アニメーション
   - フロントエンド
+  - React
+  - Next.js
 private: false
-updated_at: ''
-id: null
+updated_at: '2026-04-05T21:05:53+09:00'
+id: 6a943cb65405f77f8937
 organization_url_name: null
 slide: false
 ignorePublish: false
