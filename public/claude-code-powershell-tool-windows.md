@@ -3,11 +3,11 @@ title: Claude Code on Windowsで PowerShell ツールを有効にする
 tags:
   - Windows
   - PowerShell
-  - ClaudeCode
   - AI
+  - ClaudeCode
 private: false
-updated_at: ''
-id: null
+updated_at: '2026-04-09T16:55:27+09:00'
+id: 19046610950041aae5b4
 organization_url_name: null
 slide: false
 ignorePublish: false
