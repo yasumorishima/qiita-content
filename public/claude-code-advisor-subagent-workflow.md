@@ -1,14 +1,14 @@
 ---
 title: Claude Codeの「アドバイザー」と「サブエージェント」── Maxプランでの使い方
 tags:
-  - ClaudeCode
-  - Anthropic
+  - tips
   - AI
   - LLM
-  - Tips
+  - Anthropic
+  - ClaudeCode
 private: false
-updated_at: ''
-id: null
+updated_at: '2026-04-11T21:23:31+09:00'
+id: fec4e0859bf102dfa6d8
 organization_url_name: null
 slide: false
 ignorePublish: false
