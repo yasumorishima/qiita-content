@@ -1,14 +1,14 @@
 ---
 title: Claude Code hook で AI coding assistant の規律を補強する — 個人運用での設計パターン参考
 tags:
+  - shell
+  - AI
+  - Workflow
   - Claude
   - ClaudeCode
-  - AI
-  - workflow
-  - shell
 private: false
-updated_at: '2026-05-22T23:00:00+09:00'
-id: null
+updated_at: '2026-05-22T18:15:25+09:00'
+id: a1c012c552fecb519198
 organization_url_name: null
 slide: false
 ignorePublish: false
