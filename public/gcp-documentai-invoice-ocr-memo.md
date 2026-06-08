@@ -1,13 +1,13 @@
 ---
-title: '【検証メモ】GCPで請求書の表OCRを安定させたい：これから試す構成の覚書'
+title: 【検証メモ】GCPで請求書の表OCRを安定させたい：これから試す構成の覚書
 tags:
-  - GCP
-  - OCR
-  - DocumentAI
   - 機械学習
+  - OCR
+  - GoogleCloud
+  - documentai
 private: false
-updated_at: ''
-id: null
+updated_at: '2026-06-08T22:32:42+09:00'
+id: 9fbb517caeff24395696
 organization_url_name: null
 slide: false
 ignorePublish: false
