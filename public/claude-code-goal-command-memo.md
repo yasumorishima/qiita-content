@@ -1,13 +1,13 @@
 ---
-title: 'Claude Code の /goal を使ってみる前に調べたことメモ'
+title: Claude Code の /goal を使ってみる前に調べたことメモ
 tags:
-  - ClaudeCode
-  - Claude
-  - Codex
   - AI
+  - codex
+  - Claude
+  - ClaudeCode
 private: false
-updated_at: ''
-id: null
+updated_at: '2026-06-09T06:23:22+09:00'
+id: c216c970bd84ba0327d7
 organization_url_name: null
 slide: false
 ignorePublish: false
