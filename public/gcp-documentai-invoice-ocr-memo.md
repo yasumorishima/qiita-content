@@ -5,12 +5,12 @@ tags:
   - OCR
   - DocumentAI
   - 機械学習
-private: true
+private: false
 updated_at: ''
 id: null
 organization_url_name: null
 slide: false
-ignorePublish: true
+ignorePublish: false
 ---
 
 > **この記事の位置づけ（先に必ず読んでください）**
