@@ -1,13 +1,13 @@
 ---
-title: "個人開発の日記アプリ「Daily Diary」を Claude Fable 5 でレビューしてもらった記録 — 見つかったバグと所感"
+title: 個人開発の日記アプリ「Daily Diary」を Claude Fable 5 でレビューしてもらった記録 — 見つかったバグと所感
 tags:
-  - Claude
+  - Dart
+  - AI
   - Flutter
   - 個人開発
-  - AI
-  - Dart
+  - Claude
 private: false
-updated_at: ''
+updated_at: '2026-06-16T07:49:29+09:00'
 id: 13caf48c5ad9d9c0d9e2
 organization_url_name: null
 slide: false
