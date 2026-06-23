@@ -1,14 +1,14 @@
 ---
 title: Raspberry Pi 5 が電源ONなのにネットから消える問題を journalctl で診断して watchdog で自動復旧する
 tags:
-  - RaspberryPi
   - Linux
-  - NetworkManager
-  - Tailscale
-  - ネットワーク
+  - Network
+  - RaspberryPi
+  - networkmanager
+  - tailscale
 private: false
-updated_at: ''
-id: null
+updated_at: '2026-06-23T23:30:13+09:00'
+id: f20c4c804b584135b4af
 organization_url_name: null
 slide: false
 ignorePublish: false
