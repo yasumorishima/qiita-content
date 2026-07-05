@@ -12,6 +12,8 @@ id: ce89231a145ddb37c712
 organization_url_name: null
 slide: false
 ignorePublish: false
+posting_campaign_uuid: df853677df3984f82556
+agreed_posting_campaign_term: true
 ---
 Claude Codeさんの全力支援のもと作成。
 

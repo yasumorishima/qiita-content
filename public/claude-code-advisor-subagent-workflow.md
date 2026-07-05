@@ -12,6 +12,8 @@ id: fec4e0859bf102dfa6d8
 organization_url_name: null
 slide: false
 ignorePublish: false
+posting_campaign_uuid: fedb44eff4b119730a79
+agreed_posting_campaign_term: true
 ---
 
 Claude Codeに `/advisor` コマンドがベータ導入されました（2026年3月〜、ツール型識別子 `advisor_20260301` より）。設定するだけで、コーディング中にClaudeが自分で「上位モデルに相談」してくれる仕組みです。

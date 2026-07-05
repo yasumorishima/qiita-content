@@ -10,6 +10,8 @@ id: fb62b7dfbb4d9c82fdfc
 organization_url_name: null
 slide: false
 ignorePublish: false
+posting_campaign_uuid: null
+agreed_posting_campaign_term: false
 ---
 ***
 

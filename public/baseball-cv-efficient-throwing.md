@@ -12,6 +12,8 @@ id: aa06d1126b2a8269a132
 organization_url_name: null
 slide: false
 ignorePublish: false
+posting_campaign_uuid: null
+agreed_posting_campaign_term: false
 ---
 
 > **ライセンス表記**: 本記事で使用しているモーションキャプチャデータは [Driveline OpenBiomechanics Project](https://www.openbiomechanics.org/) のものです（**CC BY-NC-SA 4.0**、非商用・継承）。

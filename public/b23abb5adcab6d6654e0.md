@@ -10,6 +10,8 @@ id: b23abb5adcab6d6654e0
 organization_url_name: null
 slide: false
 ignorePublish: false
+posting_campaign_uuid: null
+agreed_posting_campaign_term: false
 ---
 # python tesseract OCR するメモ3
 

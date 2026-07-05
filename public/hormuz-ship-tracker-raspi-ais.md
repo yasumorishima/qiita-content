@@ -12,6 +12,8 @@ id: 259af7d5ca5e12aa5240
 organization_url_name: null
 slide: false
 ignorePublish: false
+posting_campaign_uuid: null
+agreed_posting_campaign_term: false
 ---
 
 > **データの範囲について**: 本記事のデータは[aisstream.io](https://aisstream.io/)の**陸上AIS受信局**に基づくものです。海峡中央部など沖合のカバレッジは限られており、衛星AISを含めた全体像とは異なる可能性があります。記事中の数値は全て**2026年3月中旬時点**の観測値であり、状況は日々変化しています。

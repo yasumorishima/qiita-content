@@ -9,6 +9,8 @@ id: c6fc4ec3b3da9461cfe7
 organization_url_name: null
 slide: false
 ignorePublish: false
+posting_campaign_uuid: null
+agreed_posting_campaign_term: false
 ---
 このコードは、野球選手の大谷翔平選手（ID: 660271）に関するデータを分析し、彼の打撃データを視覚化するためのものです。
 

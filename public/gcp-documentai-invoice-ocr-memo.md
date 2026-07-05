@@ -11,6 +11,8 @@ id: 9fbb517caeff24395696
 organization_url_name: null
 slide: false
 ignorePublish: false
+posting_campaign_uuid: null
+agreed_posting_campaign_term: false
 ---
 
 > **この記事の位置づけ（先に必ず読んでください）**

@@ -11,6 +11,8 @@ id: 0a01976ce60ede1a7c00
 organization_url_name: null
 slide: false
 ignorePublish: false
+posting_campaign_uuid: null
+agreed_posting_campaign_term: false
 ---
 # Flutterアプリのアイコンが透明になる問題の原因と解決法
 

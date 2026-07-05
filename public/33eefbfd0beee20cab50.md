@@ -10,6 +10,8 @@ id: 33eefbfd0beee20cab50
 organization_url_name: null
 slide: false
 ignorePublish: false
+posting_campaign_uuid: 4f7ac46e5cd6c03f1397
+agreed_posting_campaign_term: true
 ---
 # Googleフォーム連携・社外向けメール自動生成システム
 

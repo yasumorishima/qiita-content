@@ -10,6 +10,8 @@ id: 7d31fd2ea1ecbba9ff51
 organization_url_name: null
 slide: false
 ignorePublish: false
+posting_campaign_uuid: db2106c2a38d86187ffc
+agreed_posting_campaign_term: true
 ---
 ![unnamed.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/2433285/1f993a54-8a70-4731-817b-a7b870e71888.png)
 

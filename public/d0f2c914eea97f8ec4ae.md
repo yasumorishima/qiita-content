@@ -8,6 +8,8 @@ id: d0f2c914eea97f8ec4ae
 organization_url_name: null
 slide: false
 ignorePublish: false
+posting_campaign_uuid: null
+agreed_posting_campaign_term: false
 ---
 # 和訳 & トラブル対応メモ<br><br>初心者向けStarknetネットワーク（GoerliまたはMainnet）にノードをインストールする方法
 

@@ -9,6 +9,8 @@ id: 37bcf7cbbbc8d910ffca
 organization_url_name: null
 slide: false
 ignorePublish: false
+posting_campaign_uuid: null
+agreed_posting_campaign_term: false
 ---
 # Google Colabで画像背景透明化！2つの手法を徹底比較
 

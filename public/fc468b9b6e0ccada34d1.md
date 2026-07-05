@@ -8,6 +8,8 @@ id: fc468b9b6e0ccada34d1
 organization_url_name: null
 slide: false
 ignorePublish: false
+posting_campaign_uuid: null
+agreed_posting_campaign_term: false
 ---
 # spotify APIで日本の曲のデータ解析
 

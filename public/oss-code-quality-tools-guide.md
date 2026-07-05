@@ -12,6 +12,8 @@ id: 6bab97ab4de9c5cf47a1
 organization_url_name: null
 slide: false
 ignorePublish: false
+posting_campaign_uuid: null
+agreed_posting_campaign_term: false
 ---
 ## この記事の対象読者
 

@@ -9,6 +9,8 @@ id: f1dd7f36ceb3f9d3a3e2
 organization_url_name: null
 slide: false
 ignorePublish: false
+posting_campaign_uuid: null
+agreed_posting_campaign_term: false
 ---
 Google Colaboratory で実施した例です<br><br>
 Google Colaboratory → <https://colab.research.google.com/?hl=ja#>

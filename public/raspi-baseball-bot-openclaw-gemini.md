@@ -12,6 +12,8 @@ id: 743dfa455650bd21acdc
 organization_url_name: null
 slide: false
 ignorePublish: false
+posting_campaign_uuid: null
+agreed_posting_campaign_term: false
 ---
 
 > **導入編 — サンドボックス環境としてのRaspberry Piでの実験記録**

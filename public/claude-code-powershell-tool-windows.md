@@ -11,6 +11,8 @@ id: 19046610950041aae5b4
 organization_url_name: null
 slide: false
 ignorePublish: false
+posting_campaign_uuid: fedb44eff4b119730a79
+agreed_posting_campaign_term: true
 ---
 
 ## 結論
