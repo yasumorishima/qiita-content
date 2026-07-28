@@ -11,5 +11,8 @@
   "description": "",
   "dependencies": {
     "@qiita/qiita-cli": "^1.7.0"
+  },
+  "overrides": {
+    "body-parser": "^2.3.0"
   }
 }
