@@ -6,8 +6,8 @@ tags:
   - IoT
   - 組み込み
   - AXP2101
-private: true
-updated_at: '2026-07-31T10:19:56+09:00'
+private: false
+updated_at: '2026-07-31T10:39:46+09:00'
 id: 39b9cfeca52fa304a8a5
 organization_url_name: null
 slide: false
