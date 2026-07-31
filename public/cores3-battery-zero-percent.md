@@ -1,17 +1,19 @@
 ---
 title: M5Stack CoreS3 の電池残量が 0% から動かない — 調べたことと、直った理由が分からない話
 tags:
-  - M5Stack
+  - M5stack
   - ESP32
   - IoT
   - 組み込み
   - AXP2101
 private: false
-updated_at: ''
-id: null
+updated_at: '2026-07-31T10:00:00+09:00'
+id: 39b9cfeca52fa304a8a5
 organization_url_name: null
 slide: false
 ignorePublish: false
+posting_campaign_uuid: null
+agreed_posting_campaign_term: false
 ---
 
 M5Stack の公式スタックちゃん（M5STACK-K151、頭脳は CoreS3）で、**電池残量の表示が 0% から動かない**という症状に一週間ほど付き合いました。
