@@ -233,7 +233,9 @@ place = args.get("place") or ""
 
 道具の 1 つに「応援歌を歌う」があります。歌詞は球団公式のページから実行時に取り、旋律は公開されている音源や譜面から自前で採譜しました（歌う部分はさくらではなく、ローカルの歌声合成です）。
 
-動画（17 秒・音あり）を GitHub の README に置きました。
+<img src="https://raw.githubusercontent.com/yasumorishima/stackchan-lab/main/docs/media/kyoda-cheer-song.gif" width="240" alt="京田陽太の応援歌を歌うスタックちゃん">
+
+「京田陽太さんの応援歌を歌いますね」と言ってから歌い始めます。**音つきの動画（17 秒）**は GitHub の README に置きました。
 
 **[歌っているところ（stackchan-lab の README）](https://github.com/yasumorishima/stackchan-lab#実物)**
 
