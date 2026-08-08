@@ -2,16 +2,18 @@
 title: さくらのAI Engine を卓上ロボットの頭にした ― 道具19個・ツール選択33/34・実測メモ
 tags:
   - RaspberryPi
-  - M5Stack
+  - M5stack
   - LLM
   - 個人開発
   - さくらのAI
 private: true
-updated_at: ''
-id: null
+updated_at: '2026-08-09T07:32:15+09:00'
+id: b9956c6dca683eeb4dd5
 organization_url_name: null
 slide: false
 ignorePublish: false
+posting_campaign_uuid: null
+agreed_posting_campaign_term: false
 ---
 
 M5Stack の卓上ロボット「スタックちゃん」の頭脳を、**さくらのAI Engine の `gpt-oss-120b`** に載せ替えました。
