@@ -10,6 +10,8 @@ private: true
 updated_at: ''
 id: null
 organization_url_name: null
+slide: false
+ignorePublish: false
 ---
 
 M5Stack の卓上ロボット「スタックちゃん」の頭脳を、**さくらのAI Engine の `gpt-oss-120b`** に載せ替えました。
