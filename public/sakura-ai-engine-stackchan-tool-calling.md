@@ -233,9 +233,9 @@ place = args.get("place") or ""
 
 道具の 1 つに「応援歌を歌う」があります。歌詞は球団公式のページから実行時に取り、旋律は公開されている音源や譜面から自前で採譜しました（歌う部分はさくらではなく、ローカルの歌声合成です）。
 
-<img src="https://raw.githubusercontent.com/yasumorishima/stackchan-lab/main/docs/media/kyoda-cheer-song.gif" width="240" alt="京田陽太の応援歌を歌うスタックちゃん">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZzVen_yJJNY" title="スタックちゃんが応援歌を歌う" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-「京田陽太さんの応援歌を歌いますね」と言ってから歌い始めます。上の GIF には音がないので、**歌声は [YouTube（18 秒・音あり）](https://www.youtube.com/watch?v=ZzVen_yJJNY)** でどうぞ。
+「京田陽太さんの応援歌を歌いますね」と言ってから歌い始めます（18 秒・音あり）。
 
 ただし正直に書いておくと、**歌える 16 曲のうち、人が聴いて確かめたのは動画の 1 曲だけ**です。残りは合成した音を機械で測った（声の割合・渡した楽譜とのずれ・最長の無音）だけで、耳では確認していません。**しかもその数値は「合成器が楽譜どおりに鳴らしたか」であって、応援歌として良いかではありません**。今後聴いて直すかもしれませんし、直さないかもしれません。
 
