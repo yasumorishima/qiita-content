@@ -2,16 +2,18 @@
 title: ABSチャレンジを3AからMLBまでデータで見た：勝つのは捕手、ボール球を振らない打者
 tags:
   - baseball
-  - MLB
+  - mlb
   - statcast
   - Kaggle
   - データ分析
 private: false
-updated_at: ''
-id: null
+updated_at: '2026-09-28T11:08:03+09:00'
+id: 57c5760b3f9917b3883f
 organization_url_name: null
 slide: false
 ignorePublish: false
+posting_campaign_uuid: null
+agreed_posting_campaign_term: false
 ---
 
 ## ABSチャレンジとは
