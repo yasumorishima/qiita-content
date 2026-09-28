@@ -6,7 +6,7 @@ tags:
   - statcast
   - dbt
   - duckdb
-private: true
+private: false
 updated_at: '2026-09-28T13:49:24+09:00'
 id: 81b75c0020bf2e1d84f3
 organization_url_name: null
