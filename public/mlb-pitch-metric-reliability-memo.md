@@ -1,17 +1,19 @@
 ---
-title: 球種の良し悪しを 1 年分の run value で決めない：MLB 8,022 組で測った翌年への持ち越し
+title: '球種の良し悪しを 1 年分の run value で決めない：MLB 8,022 組で測った翌年への持ち越し'
 tags:
   - baseball
-  - MLB
+  - mlb
   - statcast
   - dbt
-  - DuckDB
+  - duckdb
 private: true
-updated_at: ''
-id: null
+updated_at: '2026-09-28T13:49:24+09:00'
+id: 81b75c0020bf2e1d84f3
 organization_url_name: null
 slide: false
 ignorePublish: false
+posting_campaign_uuid: null
+agreed_posting_campaign_term: false
 ---
 
 チームで球種を評価するときに使う数字が、**来年も同じ方向を向くか**を MLB の公開データで測りました。現場の方向けに、結論と使い方を先に書きます。
