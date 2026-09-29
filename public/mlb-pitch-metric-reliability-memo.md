@@ -7,7 +7,7 @@ tags:
   - dbt
   - duckdb
 private: false
-updated_at: '2026-09-29T08:45:23+09:00'
+updated_at: '2026-09-29T09:20:19+09:00'
 id: 81b75c0020bf2e1d84f3
 organization_url_name: null
 slide: false
