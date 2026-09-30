@@ -1,16 +1,18 @@
 ---
-title: '選手の成績見込みを足すと、チームの勝数はどこまで当たるか：MLB 2026 を先に固定して答え合わせした'
+title: 選手の成績見込みを足すと、チームの勝数はどこまで当たるか：MLB 2026 を先に固定して答え合わせした
 tags:
   - baseball
   - mlb
-  - python
+  - Python
   - statistics
 private: true
-updated_at: ''
-id: null
+updated_at: '2026-09-30T13:27:51+09:00'
+id: 3ab0430850cf892682f8
 organization_url_name: null
 slide: false
 ignorePublish: false
+posting_campaign_uuid: null
+agreed_posting_campaign_term: false
 ---
 
 シーズン前になると、各球団の「今年は何勝しそうか」という予想をよく見かけます。多くは選手一人ひとりの成績の見込みを作って、それをチームごとに足し上げたものです。これがどのくらい当たるものなのか、前から気になっていました。
