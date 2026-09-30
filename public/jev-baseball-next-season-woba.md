@@ -12,8 +12,8 @@ id: cc28f711396515c1fb31
 organization_url_name: null
 slide: false
 ignorePublish: false
-posting_campaign_uuid: null
-agreed_posting_campaign_term: false
+posting_campaign_uuid: dc6e42e0897543216e34
+agreed_posting_campaign_term: true
 ---
 
 TypeSafe の [Jev](https://docs.typesafe.ai) は、文章を書かずに「型の決まった答えと確率」だけを返す、判断に特化したモデルです。はい/いいえの確率（Noul）、選択肢の確率（Choice）、段階ごとの確率（Score）の形で答えが返ってきます。
