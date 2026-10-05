@@ -7,11 +7,13 @@ tags:
   - statistics
   - statcast
 private: true
-updated_at: ''
-id: null
+updated_at: '2026-10-05T18:49:09+09:00'
+id: 280a6e3ff8357c27c8ec
 organization_url_name: null
 slide: false
 ignorePublish: false
+posting_campaign_uuid: null
+agreed_posting_campaign_term: false
 ---
 
 選手を比べる記事や中継で、「去年の打率はこちらのほうが高い」「防御率はこちらのほうが低い」という話をよく見かけます。一方で、打席の結果を得点の価値で重み付けした wOBA や、xwOBA・FIP・K−BB% のように結果から運を取り除こうとした数字もたくさんあります。2 人の選手のどちらかを選ぶ場面で、前年のどの数字を見て選ぶと、翌年の成績が良いほうを当てられるのか。これが前から気になっていました。
