@@ -7,7 +7,7 @@ tags:
   - statistics
   - statcast
 private: false
-updated_at: '2026-10-05T18:49:09+09:00'
+updated_at: '2026-10-05T19:07:54+09:00'
 id: 280a6e3ff8357c27c8ec
 organization_url_name: null
 slide: false
