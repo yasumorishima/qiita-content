@@ -16,6 +16,10 @@ posting_campaign_uuid: null
 agreed_posting_campaign_term: false
 ---
 
+:::note info
+2026-11 追記：この記事で扱った WBC の 37 アプリは、その後 GitHub Pages（stlite＝ブラウザの中で Streamlit を動かす方式）に移し、keepalive の対象から外しました → https://yasumorishima.github.io/wbc-scouting/ 。keepalive はほかの Streamlit アプリ 4 本で今も動いています。
+:::
+
 ## 結論から
 
 Streamlit Community Cloud のアプリがスリープ（Zzz）したとき、`urllib` や `requests` で HTTP GET を送っても**アプリは起きません**。HTTP 200 は返りますが、中身は静的 HTML シェル（4,271 bytes）だけで、Python プロセスは起動しません。

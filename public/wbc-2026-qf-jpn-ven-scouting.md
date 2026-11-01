@@ -16,6 +16,10 @@ posting_campaign_uuid: null
 agreed_posting_campaign_term: false
 ---
 
+:::note info
+2026-11 追記：このアプリは GitHub Pages 版に移しました（サーバーが無く眠りません。最初の表示は 1〜2 分）→ https://yasumorishima.github.io/wbc-scouting/qf-jpn-ven.html 。この記事の Streamlit のリンクも残してあり、眠っていれば起動ボタンで動きます。
+:::
+
 ## 作ったもの
 
 WBC 2026 準々決勝・日本 vs ベネズエラ戦に特化したスカウティングダッシュボードです。

@@ -15,6 +15,10 @@ ignorePublish: false
 posting_campaign_uuid: df853677df3984f82556
 agreed_posting_campaign_term: true
 ---
+:::note info
+2026-11 追記：ダッシュボードは GitHub Pages 版に移しました（サーバーが無く眠りません）→ https://yasumorishima.github.io/wbc-scouting/ 。この記事の Streamlit のリンクも残してあり、眠っていれば起動ボタンで動きます。
+:::
+
 Claude Codeさんの全力支援のもと作成。
 
 streamlitとかCladeCodeに作成して貰わないと全然わからない。
