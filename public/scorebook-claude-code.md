@@ -1,5 +1,5 @@
 ---
-title: '草野球のスコアブックを Claude Code に読ませて成績を登録する：検算のやり方・記号の読み方・コードを公開しました'
+title: 草野球のスコアブックを Claude Code に読ませて成績を登録する：検算のやり方・記号の読み方・コードを公開しました
 tags:
   - 野球
   - ClaudeCode
@@ -7,8 +7,8 @@ tags:
   - OpenCV
   - 画像処理
 private: true
-updated_at: ''
-id: null
+updated_at: '2026-11-08T16:33:26+09:00'
+id: c9ecfde3d172a0069c65
 organization_url_name: null
 slide: false
 ignorePublish: false
