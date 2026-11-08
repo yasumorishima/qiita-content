@@ -6,7 +6,7 @@ tags:
   - Claude
   - OpenCV
   - 画像処理
-private: true
+private: false
 updated_at: '2026-11-08T16:33:26+09:00'
 id: c9ecfde3d172a0069c65
 organization_url_name: null
