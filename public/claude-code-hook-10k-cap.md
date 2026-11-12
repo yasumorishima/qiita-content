@@ -1,17 +1,19 @@
 ---
-title: 'Claude Code の SessionStart hook で渡していた 31 万字は、会話にほぼ入っていなかった（上限は 1 万字）'
+title: Claude Code の SessionStart hook で渡していた 31 万字は、会話にほぼ入っていなかった（上限は 1 万字）
 tags:
   - ClaudeCode
   - Claude
   - jq
-  - awk
-  - GitBash
+  - AWK
+  - gitbash
 private: false
-updated_at: ''
-id: null
+updated_at: '2026-11-12T20:18:57+09:00'
+id: e3d3653b05e359e2dfbb
 organization_url_name: null
 slide: false
 ignorePublish: false
+posting_campaign_uuid: null
+agreed_posting_campaign_term: false
 ---
 
 ## きっかけ
