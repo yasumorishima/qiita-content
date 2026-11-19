@@ -1,5 +1,5 @@
 ---
-title: Claude Code の hook の警告が、Claude に届いていなかった：1 か月で 417 件
+title: Claude Code に作ってもらった hook の警告が、Claude に届いていなかった
 tags:
   - ClaudeCode
   - hooks
@@ -22,55 +22,18 @@ Claude Code には hook という仕組みがあります。ツールを呼ぶ�
 
 あるとき、画面には hook の警告やエラーが出ているのに、Claude がそれに一言も触れずに作業を続けていることに気づきました。警告は私の画面には出ていても、Claude には届いていないように見えます。私にしか見えない警告では、意味がありません。
 
-そこで、どの出し方なら Claude に届くのかを公式ドキュメントで確かめ、会話の記録から「届かなかった hook の結果」を数えました。この記事はその記録です。
+そこで、どの出し方なら Claude に届くのかを公式ドキュメントで確かめ、手元の hook を見直しました。この記事はその記録です。
 
 ## 環境
 
 - PC：Windows 11・Celeron N4500・メモリ 4GB
 - シェル：Git Bash（hook はすべて bash スクリプト）
-- Claude Code：集計した期間は v2.1.304〜2.1.327、直したのは v2.1.327
+- Claude Code：v2.1.327（記録を見返した 1 か月は v2.1.304〜2.1.327）
 - hook：86 本
   - PreToolUse 55 本。settings.json には振り分け役を 1 本だけ書き、そこから最大 8 本ずつ呼ぶ
   - Stop 17 本・SessionStart 5 本・UserPromptSubmit 3 本・PostToolUse と PostToolUseFailure 6 本
 
 hook はどれも、私が Claude Code に「こういうときは止めて」と頼んで書いてもらったものです。
-
-## 数え方
-
-Claude Code は会話の記録を `~/.claude/projects/<プロジェクト>/<会話 ID>.jsonl` に 1 行 1 件の JSON で残します。hook の結果もここに `attachment` として入っています。種類（`type`）は次のとおりで、このうち最後の 3 つは Claude には渡りません。
-
-- `hook_success`：成功（出力があったときだけ記録される）
-- `hook_additional_context`：Claude に渡った文
-- `hook_blocking_error`：止めた（exit 2 など）
-- `hook_non_blocking_error`：止めない失敗。exit 1 や時間切れ
-- `hook_cancelled`：Claude Code が打ち切った
-- `hook_system_message`：`systemMessage`（利用者向けの警告）
-
-期間を日本時間の 2026-10-20 9 時から、直す前の 11-19 11 時までに固定して、jq で数えました（記録の時刻は UTC なので、下の引数も UTC です）。
-
-言葉を 2 つ使い分けます。**時間切れ**は、私の振り分け役や実行役が自分の制限で hook を止めたもの（記録では止めない失敗）。**打ち切り**は、Claude Code が設定の制限で hook を止めたもの（`hook_cancelled`）です。
-
-```jq:count.jq
-select(.attachment? and (.timestamp // "") >= $from and (.timestamp // "") < $to)
-| .attachment
-| select(.type == "hook_non_blocking_error" or .type == "hook_cancelled" or .type == "hook_system_message")
-| [ .type, (.hookEvent // ""), ((.command // .hookName // "") | split("hooks/") | last) ]
-| @tsv
-```
-
-```bash
-cat ~/.claude/projects/<プロジェクト>/*.jsonl \
-  | jq -r --arg from 2026-10-20 --arg to 2026-11-19T02:00 -f count.jq \
-  | cut -f2 | sort | uniq -c
-```
-
-## 1 か月で 417 件が、Claude に届かずに終わっていた
-
-![fig1](https://raw.githubusercontent.com/yasumorishima/zenn-content/master/images/claude-code-hook-visibility-fig1.png)
-
-40 会話のあいだに、Claude に届かずに終わった hook の結果は 417 件ありました。一番多いのはツールを呼ぶ前の PreToolUse で 221 件でした。そのうち 182 件は振り分け役が 60 秒で止めた時間切れ、23 件は振り分け役ごと Claude Code の制限（600 秒）で打ち切られたものです。次が会話の始まりの SessionStart で、138 件のうち 137 件が打ち切りでした。
-
-どれも、私の画面には「hook error」などの短い表示が出ていました。けれど Claude はそれを受け取っていないので、反応のしようがありません。そして件数以上に困るのは、**時間切れや打ち切りになった hook は、守るはずだったチェックをしていない**ことです。
 
 ## Claude に届く主な出口は 4 つ
 
@@ -94,11 +57,17 @@ cat ~/.claude/projects/<プロジェクト>/*.jsonl \
 
 私の hook は、「止めるほどではないので exit 0 で stderr に警告を出す」という作りが多く、そのままだと全部どこにも届いていませんでした（振り分け役のほうで先に手当てしていた分を除く）。
 
+## 届かないだけでなく、チェック自体が走っていなかった
+
+会話の記録を見返すと、画面に「hook error」などと短く出ていたものの多くは、hook が時間内に終わらなかった跡でした。こうなった hook は、Claude に何も伝えないだけでなく、守るはずだったチェックそのものをしていません。
+
+ここからは言葉を 2 つ使い分けます。**時間切れ**は、私の振り分け役や実行役が自分の制限で hook を止めたもの（記録では止めない失敗）。**打ち切り**は、Claude Code が設定の制限で hook を止めたもの（記録では `hook_cancelled`）です。
+
 ## 具体例 1：ビルド計測の hook は、行数に比例して遅くなっていた
 
 ![fig4](https://raw.githubusercontent.com/yasumorishima/zenn-content/master/images/claude-code-hook-visibility-fig4.png)
 
-PreToolUse の時間切れ 182 件のうち 181 件は、1 本の hook でした。RPi5 にビルドやテストを投げるコマンドに、メモリ計測の `peakrss` を付け忘れていないかを見る hook です。
+時間切れでいちばん多かったのは、1 本の hook でした。RPi5 にビルドやテストを投げるコマンドに、メモリ計測の `peakrss` を付け忘れていないかを見る hook です。
 
 この hook は、コマンドを `;` や `&&` や `|` や改行で区切り、区切った 1 つずつを `sed`・`tr`・`grep` に通して先頭の語を調べていました。Git Bash では、プログラムを 1 回起動するたびに時間がかかります。区切り 1 つあたり十数回の起動が積み重なっていました。
 
@@ -115,15 +84,15 @@ piece=${piece//[\"\'\`]/}
 [[ $piece =~ ^[[:space:]]+(.*)$ ]] && piece=${BASH_REMATCH[1]}
 ```
 
-## 具体例 2：会話の最初の引き継ぎが、5 回に 4 回届いていなかった
+## 具体例 2：会話の最初の引き継ぎが、ほとんど届いていなかった
 
 ![fig3](https://raw.githubusercontent.com/yasumorishima/zenn-content/master/images/claude-code-hook-visibility-fig3.png)
 
-SessionStart では、前の会話からの引き継ぎ（次にやることの一覧）を Claude に渡す hook を走らせています。SessionStart は会話の最初だけでなく、会話が長くなって圧縮されたあとの再開でも走ります。この hook の制限は 10 秒で、記録を数えると、会話の最初の 40 回のうち 32 回は打ち切られていました。圧縮後の再開は 148 回のうち 20 回です。
+SessionStart では、前の会話からの引き継ぎ（次にやることの一覧）を Claude に渡す hook を走らせています。SessionStart は会話の最初だけでなく、会話が長くなって圧縮されたあとの再開でも走ります。この hook の制限は 10 秒で、記録を見ると、会話の最初ではほとんどの回で打ち切られていました。圧縮後の再開では、打ち切りは一部だけです。
 
 会話の最初のほうが打ち切られやすいのは、Claude Code 自身の起動と重なって PC が一番忙しい時間だからだと思います。届かなかった回の Claude は、引き継ぎを知らないまま会話を始めていたことになります。
 
-同時に走る他の 3 本（資格情報の置き場所の点検、設定の乗っ取り点検、RPi5 のディスクの確認）は制限が 15 秒で、それぞれ 15 回・26 回・43 回打ち切られていました。この 3 本は、何も見つからなければ黙って終わるので、成功はほとんど記録に残りません（成功が記録されるのは、何か出力したときだけ）。そのため完走した割合は出せず、打ち切られた回数だけが分かります。
+同時に走る他の 3 本（資格情報の置き場所の点検、設定の乗っ取り点検、RPi5 のディスクの確認）も、制限 15 秒で何度も打ち切られていました。この 3 本は何も見つからなければ黙って終わる作りなので、打ち切られても、画面に短い表示が出る以外は何も起きません。
 
 原因は、遅い PC で 5 本を一斉に起動していることと、制限が短いことでした。
 
@@ -136,7 +105,7 @@ child_copy: cygheap read copy failed
 /usr/bin/bash: Resource temporarily unavailable
 ```
 
-Stop の hook の失敗は 1 か月で 44 件でした。原因が読めた 14 件は、どれもプロセスを起動できなかった失敗です（上の 2 つのほか、`uv_spawn` の `EUNKNOWN`、git の起動の失敗など）。残りの 30 件は stderr が空で、記録からは原因が分かりません。どの場合も止めない失敗として扱われるので Claude には何も届かず、チェックが最後まで走ったかどうかも分かりません。
+原因が読めたものは、どれもプロセスを起動できなかった失敗です（上の 2 つのほか、`uv_spawn` の `EUNKNOWN`、git の起動の失敗など）。stderr が空で、記録からは原因が分からないものも多くありました。どの場合も止めない失敗として扱われるので Claude には何も届かず、チェックが最後まで走ったかどうかも分かりません。
 
 ## 直し方：hook を包む実行役を 1 本はさむ
 
@@ -221,11 +190,11 @@ Stop の hook が `additionalContext` を返すと、ドキュメントのとお
 
 ## まとめ
 
-今回の環境では、Claude Code に作ってもらった hook の多くが、Claude に届かない形で警告を出していました。そして遅い PC では、hook そのものが時間内に走りきれていませんでした。1 か月で 417 件、そのどれもが私の画面に短く出ただけで、Claude は知らないまま作業を続けていました。
+今回の環境では、Claude Code に作ってもらった hook の多くが、Claude に届かない形で警告を出していました。そして遅い PC では、hook そのものが時間内に走りきれていませんでした。どちらも私の画面に短く出ただけで、Claude は知らないまま作業を続けていました。
 
 個人的に一番の発見は、警告が届かないことより、走らなかったチェックが「走らなかった」と誰にも伝わらないことでした。私は hook が守ってくれているつもりでいたので、この抜けに気づけませんでした。
 
-会話の記録（`~/.claude/projects/` の JSONL）に `hook_non_blocking_error` と `hook_cancelled` がどれだけあるかは、jq で数分あれば数えられます。
+自分の環境で同じことが起きていないかは、会話の記録から確かめられます。やり方は付録に書きました。
 
 ## 付録
 
@@ -236,11 +205,35 @@ Stop の hook が `additionalContext` を返すと、ドキュメントのとお
 - **SessionStart / UserPromptSubmit**：会話の始まり／利用者が文を送ったときに走る hook
 - **additionalContext**：hook が JSON で返す、Claude 向けの文。システムからの注記として Claude に渡る
 
+### 自分の環境で確かめる
+
+Claude Code は会話の記録を `~/.claude/projects/<プロジェクト>/<会話 ID>.jsonl` に 1 行 1 件の JSON で残します。hook の結果も `attachment` として入っていて、種類（`type`）のうち次の 3 つは Claude には渡っていません。
+
+- `hook_non_blocking_error`：止めない失敗（exit 1 や時間切れ）
+- `hook_cancelled`：Claude Code が打ち切った
+- `hook_system_message`：`systemMessage`（利用者向けの警告）
+
+イベントと hook ごとに数えるなら、次のようにしました。
+
+```jq:count.jq
+select(.attachment?)
+| .attachment
+| select(.type == "hook_non_blocking_error" or .type == "hook_cancelled" or .type == "hook_system_message")
+| [ .type, (.hookEvent // ""), ((.command // .hookName // "") | split("hooks/") | last) ]
+| @tsv
+```
+
+```bash
+cat ~/.claude/projects/<プロジェクト>/*.jsonl \
+  | jq -r -f count.jq \
+  | sort | uniq -c | sort -rn
+```
+
 ### 注意
 
-- 数字は私の環境（遅い PC・hook 86 本）の 1 か月分です。速い PC や hook の少ない環境では、時間切れはずっと少ないと思います
-- 「成功」の記録は hook が何か出力したときしか残らないので、黙って終わる hook の完走率は記録からは出せません。Claude Code が `command hook 2` のように名前を付けずに記録する成功もあり、引き継ぎの hook は出力の中身で見分けて数えました
-- hook の扱いは Claude Code の版で変わることがあります。集計の期間は v2.1.304〜2.1.327、直したあとの確認は v2.1.327、ドキュメントは 2026-11-19 に読んだものです
+- 私の環境（遅い PC・hook 86 本）での話です。速い PC や hook の少ない環境では、時間切れはずっと少ないと思います
+- 成功の記録は hook が何か出力したときしか残らないので、黙って終わる hook が毎回最後まで走ったかは、記録からは分かりません
+- hook の扱いは Claude Code の版で変わることがあります。記録を見返した期間は v2.1.304〜2.1.327、直したあとの確認は v2.1.327、ドキュメントは 2026-11-19 に読んだものです
 
 ### 参考
 
