@@ -6,7 +6,7 @@ tags:
   - Claude
   - gitbash
   - Windows
-private: true
+private: false
 updated_at: '2026-11-19T19:48:46+09:00'
 id: 2e2517c6a9fc30f805f4
 organization_url_name: null
