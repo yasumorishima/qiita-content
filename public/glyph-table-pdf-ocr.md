@@ -7,11 +7,13 @@ tags:
   - Claude
   - 統計
 private: false
-updated_at: ''
-id: null
+updated_at: '2026-11-24T08:30:29+09:00'
+id: ad5c68cb730a2e655f85
 organization_url_name: null
 slide: false
 ignorePublish: false
+posting_campaign_uuid: null
+agreed_posting_campaign_term: false
 ---
 
 趣味で統計データを分析していると、元の数字が役所の PDF でしか公開されていないことがよくあります。毎月同じ書式で出る、統計の月報のような資料です。ふつうの PDF なら、数字をコピーして表計算ソフトに貼れます。ところが PDF によっては、画面では読めるのに、コピーすると記号の羅列になったり、そもそも文字を選べなかったりします。
